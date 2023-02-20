@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Harry Potter: The Sorting Hat</title>
+    <!-- Photo of the Sorting Hat is taken from https://harrypotter.fandom.com/wiki/Sorting_Hat -->
+    <link rel="icon" href="img/sortinghat.png">
+    <link rel="stylesheet" href="styleDetailsAndQuiz.css">
+</head>
+<body id="body1">
+<div class="quiz-container" id="quiz">
+    <div class="quiz-header">
+        <h5>Welcome to the Harry Potter Sorting Hat Experience! Are you Gryffindor? Ravenclaw? Hufflepuff?
+            Or Slytherin? Continue on to find out! ⚯ ⏃</h5>
+        <!--
+        Modified from:
+        *   Title: Custom input text field
+        *   Author: Raghav
+        *   Date: August 17, 2018
+        *   Code version: Unknown, but code was updated on August 17, 2018
+        *   Availability: https://codepen.io/ravitej5226/pen/yqdwda
+        -->
+        <div class="field-container">
+            <input class="field-input" id="name" name="inputName" type="text" placeholder=" ">
+            <label class="field-placeholder" for="name">Name</label>
+        </div>
+        <br>
+        <div class="field-container">
+            <input class="field-input" id="age" name="inputAge" type="text" placeholder=" ">
+            <label class="field-placeholder" for="age">Age</label>
+        </div>
+        <!-- End of citation -->
+
+        <!--
+        Modified from:
+        *   Title: Pill styled radio buttons | Fully scaleable
+        *   Author: Håvard Brynjulfsen
+        *   Date: April 20, 2020
+        *   Code version: Unknown, but code was updated on June 10, 2020
+        *   Availability: https://codepen.io/havardob/pen/dyYXBBr
+        -->
+        <div class="container">
+            <h6>
+                <form>
+                    <label>
+                        <input type="radio" name="radio" id="genderMale"/>
+                        <span>Male</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="radio" id="genderFemale"/>
+                        <span>Female</span>
+                    </label>
+                </form>
+            </h6>
+        </div>
+        <!-- End of citation -->
+    </div>
+    <button id="submit" class="button" onclick="addPerson(document.getElementById('name').value, document.getElementById('age').value,
+            document.getElementById('genderMale').checked, document.getElementById('genderFemale').checked)">Enter</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
